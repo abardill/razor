@@ -373,8 +373,8 @@ void process_reads(const char* infile, const char* outfile,
 	int num_adapters = 0;
 	if (trim_adapters){
 		num_adapters = init_adapters(&adapters, trim_args->adapter_file,
-									 			trim_args->adapter,
-									 			trim_args->min_adapter_match);
+					     		trim_args->adapter,
+					     		trim_args->min_adapter_match);
 
 		kmp_preprocess(&adapters, num_adapters);
 	}
