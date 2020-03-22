@@ -6,7 +6,7 @@ Currently, Razor only works on unix-like systems, and requires the zlib compress
 
 Razor supports reading and writing both uncompressed and gzipped fastq files; the format is determined by the filename suffix.
 ## Installation
-    git clone https://raw.githubusercontent.com/abardill/razor
+    git clone https://github.com/abardill/razor
     cd razor
     gcc -o razor razor.c -Wall -lz -O2
 ## Usage
