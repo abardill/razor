@@ -1,7 +1,7 @@
 # Razor
 Razor is a fast and simple adapter/quality trimming tool for fastq sequences.
 It uses the ERNE-FILTER[1] algorthm for quality trimming, which operates on both ends of a read. 
-The 3' adapter-trimming algorithm works by moving from left to right in a read until a match is found, and then removing all bases after that point.
+The 3' adapter-trimming algorithm works by moving from left to right in a read until a match is found using the Knuth-Morris-Pratt algorithm[2], and then removing all bases after that point.
 Currently, Razor only works on unix-like systems, and requires the zlib compression library (www.zlib.net).
 
 Razor supports reading and writing both uncompressed and gzipped fastq files; the format is determined by the filename suffix.
@@ -57,5 +57,7 @@ To print the full help information use
 
  
 ## References
-[1] Fabbro, Cristian Del, Simone Scalabrin, Michele Morgante, and Federico M. Giorgi. “An Extensive Evaluation of Read Trimming Effects on Illumina NGS Data Analysis.” PLOS ONE 8, no. 12 (December 23, 2013): e85024. https://doi.org/10.1371/journal.pone.0085024.
+[1] Fabbro, Cristian Del, Simone Scalabrin, Michele Morgante, and Federico M. Giorgi. “An Extensive Evaluation of Read Trimming Effects on Illumina NGS Data Analysis.” PLOS ONE 8, no. 12 (December 23, 2013): e85024. [doi:10.1371/journal.pone.0085024](https://doi.org/10.1371/journal.pone.0085024)
+
+[2] Knuth, Donald; Morris, James H.; Pratt, Vaughan (1977). "Fast pattern matching in strings". SIAM Journal on Computing. 6 (2): 323–350. [doi:10.1137/0206024.](https://doi.org/10.1137/0206024)
 
